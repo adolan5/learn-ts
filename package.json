@@ -1,0 +1,8 @@
+{
+  "name": "learn-ts",
+  "version": "0.0.1",
+  "description": "Example project to learn TypeScript and CI/CD.",
+  "main": "index.ts",
+  "author": "Andy Dolan",
+  "license": "MIT"
+}
