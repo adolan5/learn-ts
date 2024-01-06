@@ -4,5 +4,8 @@
   "description": "Example project to learn TypeScript and CI/CD.",
   "main": "index.ts",
   "author": "Andy Dolan",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
 }
