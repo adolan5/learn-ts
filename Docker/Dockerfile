@@ -4,7 +4,7 @@ WORKDIR /opt/app
 
 COPY . .
 
-RUN yarn install && yarn test
+RUN yarn install && yarn test && yarn build
 
 ENTRYPOINT "/bin/bash"
 
@@ -14,4 +14,4 @@ WORKDIR /opt/app
 COPY --from=build /opt/app/dist /opt/app
 COPY --from=build ["/opt/app/package.json", "/opt/app/yarn.lock", "/opt/app"]
 
-CMD ["yarn", "start"]
+CMD ["node", "index.js"]
