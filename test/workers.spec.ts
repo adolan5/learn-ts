@@ -1,11 +1,12 @@
-import MathWorker from '../src/workers';
+import { expect } from 'chai';
+import MathWorker from '../src/workers.js';
 
 describe('Test MathWorker', () => {
 
   const mw = new MathWorker(5);
 
   it('should add two numbers', () => {
-    expect(mw.add(5, 3)).toEqual(8);
-    expect(mw.getTokens()).toEqual(4);
+    expect(mw.add(5, 3)).to.equal(8);
+    expect(mw.getTokens()).to.equal(4);
   });
 });
