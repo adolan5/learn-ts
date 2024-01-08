@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm install -g yarn
+      - run: yarn install
       - run: yarn test
 
   build-app:
@@ -19,6 +20,8 @@ jobs:
     needs: [run-tests]
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
       - uses: docker/setup-buildx-action@v3
       - uses: docker/build-push-action@v5
         with:

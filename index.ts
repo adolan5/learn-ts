@@ -11,4 +11,5 @@ while (myMw.getTokens() > 0) {
   let y = randomInt(0, 100);
 
   console.log(`${x} + ${y} = ${myMw.add(x, y)}`);
+  console.log(`${x} - ${y} = ${myMw.subtract(x, y)}`);
 }
