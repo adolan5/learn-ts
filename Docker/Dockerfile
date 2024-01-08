@@ -4,15 +4,13 @@ WORKDIR /opt/app
 
 COPY . .
 
-RUN yarn install && yarn test && yarn build
+RUN yarn install && yarn test && yarn bun
 
 ENTRYPOINT "/bin/bash"
 
 FROM node:20-alpine
 
 WORKDIR /opt/app
-COPY --from=build /opt/app/dist /opt/app
-COPY --from=build ["/opt/app/package.json", "/opt/app/yarn.lock", "/opt/app"]
-RUN yarn install --prod
+COPY --from=build ["/opt/app/dist/bundle.js", "/opt/app/package.json", "/opt/app"]
 
-CMD ["node", "index.js"]
+CMD ["node", "bundle.js"]
