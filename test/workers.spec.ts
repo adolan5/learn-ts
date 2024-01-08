@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import MathWorker from '../src/workers.js';
+import MathWorker from '../src/workers.ts';
 
 describe('Test MathWorker', () => {
 

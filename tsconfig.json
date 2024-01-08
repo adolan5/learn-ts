@@ -3,6 +3,8 @@
   "include": ["src/**/*.ts", "test/**/*.spec.ts", "index.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   }
 }

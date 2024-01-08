@@ -1,4 +1,4 @@
-import MathWorker from './src/workers.js'
+import MathWorker from './src/workers.ts'
 import { randomInt } from 'crypto';
 
 console.log('Starting work.');

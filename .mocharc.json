@@ -1,3 +1,5 @@
 {
-  "spec": ["dist/test"]
+  "spec": ["test"],
+  "extension": ["ts"],
+  "loader": "ts-node/esm"
 }

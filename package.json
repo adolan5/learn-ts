@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --build",
-    "test": "yarn build && mocha",
+    "test": "mocha",
     "clean": "tsc --build --clean",
     "start": "node index.js"
   },
