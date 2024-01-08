@@ -22,4 +22,9 @@ export default class MathWorker {
     this.workPrecheck();
     return x + y;
   }
+
+  public subtract(x: number, y: number): number {
+    this.workPrecheck();
+    return x - y;
+  }
 }
