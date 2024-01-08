@@ -1,5 +1,7 @@
-import { expect } from 'chai';
+import * as chai from 'chai';
 import MathWorker from '../src/workers.js';
+
+const expect = chai.expect;
 
 describe('Test MathWorker', () => {
 
@@ -13,5 +15,9 @@ describe('Test MathWorker', () => {
   it('should subtract two numbers', () => {
     expect(mw.subtract(5, 3)).to.equal(2);
     expect(mw.getTokens()).to.equal(3);
+  });
+
+  it('should return its UUID', () => {
+    expect(mw.getId()).to.match(/^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-4[0-9A-Fa-f]{3}-[89ABab][0-9A-Fa-f]{3}-[0-9A-Fa-f]{12}$/)
   });
 });

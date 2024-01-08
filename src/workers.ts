@@ -27,4 +27,8 @@ export default class MathWorker {
     this.workPrecheck();
     return x - y;
   }
+
+  public getId(): string {
+    return this.uuid;
+  }
 }
