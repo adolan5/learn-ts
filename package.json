@@ -10,7 +10,7 @@
     "build": "tsc --build",
     "test": "mocha",
     "clean": "tsc --build --clean",
-    "start": "node index.js"
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
