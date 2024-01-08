@@ -10,7 +10,8 @@
     "test": "mocha",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "bun": "esbuild index.ts --bundle --platform=node --target=node20 --format=esm --minify --outfile=dist/bundle.js"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
@@ -19,6 +20,7 @@
     "@types/node": "^20.10.7",
     "@types/uuid": "^9.0.7",
     "chai": "^5.0.0",
+    "esbuild": "^0.19.11",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
